@@ -1,0 +1,65 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "properties": {
+    "interval": {
+      "$id": "#/properties/interval",
+      "type": "integer",
+      "title": "The Interval Schema",
+      "default": 0,
+      "examples": [
+        5
+      ]
+    },
+    "workers": {
+      "$id": "#/properties/workers",
+      "type": "integer",
+      "title": "The Workers Schema",
+      "default": 0,
+      "examples": [
+        4
+      ]
+    },
+    "urls": {
+      "$id": "#/properties/urls",
+      "type": "array",
+      "title": "The Urls Schema",
+      "items": {
+        "$id": "#/properties/urls/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "url": {
+            "$id": "#/properties/urls/items/properties/url",
+            "type": "string",
+            "title": "The Url Schema",
+            "default": "",
+            "examples": [
+              "www.google.com"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "condition": {
+            "$id": "#/properties/urls/items/properties/condition",
+            "type": "string",
+            "title": "The Condition Schema",
+            "default": "",
+            "examples": [
+              "Google"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "urls"
+  ]
+}

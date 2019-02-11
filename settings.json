@@ -1,0 +1,20 @@
+{
+    "interval": 5,
+    "workers": 4,
+    "urls": [
+        {
+            "url": "http://www.google.com",
+            "condition": "Google"
+        },
+        {
+            "url": "http://www.facebook.com",
+            "condition": "81372498127KJNXKANXKJANXKNX"
+        },
+        {
+            "url": "http://www.yahoo.com"
+        },
+        {
+            "url": "http://httpstat.us/400"
+        }
+    ]
+}
