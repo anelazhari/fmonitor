@@ -8,11 +8,8 @@ from json.decoder import JSONDecodeError
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 
-# Setup logging
-FORMAT = '%(asctime)-15s [%(levelname)s] %(message)s'
-logging.basicConfig(format=FORMAT)
+
 _logger = logging.getLogger('__name__')
-_logger.setLevel(logging.INFO)
 
 
 def parse_settings(file_path='settings.json'):
